@@ -1,0 +1,29 @@
+<?php
+
+function CSVtoTable_menu()
+{
+
+
+$items['admin/config/CsvtoTable'] = array(
+		'title' => 'CSV to Table',
+		'description' => 'Configure Csv to table settings',
+		'position' => 'right',
+		'weight' => 100,
+		'page callback' => 'system_admin_menu_block_page',
+		'access arguments' => array('administer site configuration'),
+		'file' => 'system.admin.inc',
+		'file path' => drupal_get_path('module', 'system'),
+		
+	);
+$items['admin/config/CsvtoTable/configuration'] = array(
+		'title' => 'Configure Csv to table',
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('CSV_config_form'),
+		'access arguments' => array('administer site configuration'),
+		'file' => 'CSV.config.inc',
+	);
+
+
+	return $items;
+}
+?>

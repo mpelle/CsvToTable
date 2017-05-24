@@ -1,0 +1,5 @@
+name = CSVtoTable
+description = Quickly and easily allows you to read a csv and display it in an html table 
+package = CSVtoTable
+core = 7.x
+configure = admin/config/csvtotable/configuration
